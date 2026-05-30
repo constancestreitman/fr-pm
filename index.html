@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FR Product &amp; Feature Roadmap Q2&amp;3 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4ece0;
+    --paper-2:#efe4d4;
+    --ink:#241c16;
+    --ink-soft:#5b4f44;
+    --line:#d8c9b3;
+    --maroon:#7c2618;
+    --maroon-deep:#5c1a10;
+    --gold:#b07d2b;
+    --green:#3f5a36;
+    --shadow:rgba(60,40,24,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    background-image:
+      radial-gradient(circle at 18% -10%, rgba(176,125,43,.10), transparent 40%),
+      radial-gradient(circle at 110% 5%, rgba(124,38,24,.08), transparent 45%);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:18px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 28px}
+
+  /* ---- Masthead ---- */
+  header.masthead{
+    border-bottom:3px double var(--maroon);
+    padding:64px 0 30px;
+    margin-bottom:8px;
+  }
+  .eyebrow{
+    font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--maroon);font-weight:600;margin-bottom:18px;
+  }
+  h1{
+    font-family:"Fraunces",serif;
+    font-weight:900;
+    font-size:clamp(2.4rem,6vw,4.1rem);
+    line-height:1.02;
+    letter-spacing:-.015em;
+    color:var(--ink);
+    margin-bottom:18px;
+  }
+  h1 .l2{display:block;color:var(--maroon);font-style:italic;font-weight:500;font-size:.62em}
+  .meta{
+    display:flex;flex-wrap:wrap;gap:8px 26px;
+    font-size:.84rem;letter-spacing:.02em;color:var(--ink-soft);
+    padding-top:8px;
+  }
+  .meta b{color:var(--ink);font-weight:600}
+  .status{color:var(--gold);font-weight:600}
+
+  /* ---- Orientation card ---- */
+  .orient{
+    margin:34px 0 10px;
+    background:linear-gradient(180deg,#fbf6ee,#f1e7d6);
+    border:1px solid var(--line);
+    border-left:5px solid var(--maroon);
+    border-radius:4px;
+    padding:24px 28px;
+    box-shadow:0 10px 30px -18px var(--shadow);
+  }
+  .orient .tag{
+    font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--maroon);font-weight:600;margin-bottom:10px;
+  }
+  .orient p{font-size:1.02rem}
+  .orient p + p{margin-top:12px}
+
+  /* ---- Sections ---- */
+  section{padding:38px 0;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:none}
+  h2{
+    font-family:"Fraunces",serif;
+    font-weight:600;font-size:1.85rem;letter-spacing:-.01em;
+    margin-bottom:6px;color:var(--maroon-deep);
+  }
+  h2 .num{
+    font-size:.7rem;letter-spacing:.2em;color:var(--gold);
+    display:block;font-family:"Newsreader";font-weight:600;margin-bottom:2px;text-transform:uppercase;
+  }
+  h3{
+    font-family:"Fraunces",serif;font-weight:600;font-size:1.18rem;
+    margin:22px 0 6px;color:var(--ink);
+  }
+  p{margin-bottom:14px}
+  p.lead{font-size:1.06rem}
+  ul{list-style:none;margin:0 0 14px}
+  ul li{position:relative;padding-left:26px;margin-bottom:10px}
+  ul li::before{
+    content:"";position:absolute;left:4px;top:.62em;
+    width:7px;height:7px;background:var(--maroon);transform:rotate(45deg);
+  }
+  ul li b{color:var(--ink);font-weight:600}
+  .sub li::before{background:none;border:1.5px solid var(--gold);transform:rotate(45deg);width:6px;height:6px}
+  em{color:var(--ink-soft)}
+
+  /* ---- Note ---- */
+  .note{
+    font-size:.86rem;color:var(--ink-soft);font-style:italic;
+    border-left:3px solid var(--line);padding:4px 0 4px 16px;margin:8px 0 14px;
+  }
+
+  /* ---- RICE table ---- */
+  .table-scroll{overflow-x:auto;margin:18px 0 8px;border:1px solid var(--line);border-radius:5px;box-shadow:0 10px 30px -20px var(--shadow)}
+  table{border-collapse:collapse;width:100%;min-width:620px;font-size:.86rem;background:#fbf6ee}
+  caption{caption-side:top;text-align:left;font-size:.8rem;color:var(--ink-soft);padding:10px 14px;font-style:italic}
+  thead th{
+    background:var(--maroon);color:#f7ede0;font-family:"Newsreader";
+    font-weight:600;text-align:left;padding:11px 13px;font-size:.78rem;
+    letter-spacing:.04em;text-transform:uppercase;
+  }
+  thead th.r{text-align:center}
+  tbody td{padding:11px 13px;border-top:1px solid var(--line);vertical-align:top}
+  tbody td.r{text-align:center;font-variant-numeric:tabular-nums}
+  tbody td.feat{font-weight:600;color:var(--ink);width:24%}
+  tbody tr.ship{background:rgba(176,125,43,.12)}
+  tbody tr.ship td.rice{color:var(--maroon-deep);font-weight:700}
+  .rice-pill{display:inline-block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--maroon);font-weight:600;margin-left:6px}
+
+  /* ---- Decision rows ---- */
+  .decision{margin-bottom:12px;padding-left:26px;position:relative}
+  .decision::before{content:"";position:absolute;left:4px;top:.5em;width:8px;height:8px;border-radius:50%}
+  .decision.go::before{background:var(--green)}
+  .decision.shelf::before{background:var(--gold)}
+  .decision.no::before{background:var(--maroon)}
+  .decision .verdict{font-family:"Fraunces";font-weight:600}
+  .decision.go .verdict{color:var(--green)}
+  .decision.shelf .verdict{color:var(--gold)}
+  .decision.no .verdict{color:var(--maroon)}
+
+  /* ---- Document cards ---- */
+  .docs-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:8px 0 4px}
+  @media(min-width:620px){.docs-grid{grid-template-columns:1fr 1fr}}
+  .doc-card{
+    display:flex;flex-direction:column;
+    background:linear-gradient(180deg,#fbf6ee,#f0e5d4);
+    border:1px solid var(--line);border-radius:6px;
+    padding:22px 22px 20px;text-decoration:none;color:inherit;
+    transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+    box-shadow:0 8px 24px -18px var(--shadow);position:relative;overflow:hidden;
+  }
+  .doc-card::after{
+    content:"PDF";position:absolute;top:14px;right:16px;
+    font-size:.64rem;letter-spacing:.2em;font-weight:600;color:#fff;
+    background:var(--maroon);padding:3px 8px;border-radius:3px;
+  }
+  .doc-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px var(--shadow);border-color:var(--maroon)}
+  .doc-card .kind{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+  .doc-card .t{font-family:"Fraunces";font-weight:600;font-size:1.18rem;line-height:1.15;margin-bottom:8px;color:var(--ink)}
+  .doc-card .d{font-size:.9rem;color:var(--ink-soft);flex-grow:1}
+  .doc-card .open{margin-top:14px;font-size:.82rem;font-weight:600;color:var(--maroon);letter-spacing:.02em}
+  .doc-card .open span{transition:margin-left .18s ease}
+  .doc-card:hover .open span{margin-left:5px}
+  .docs-grid.full{grid-template-columns:1fr}
+  .doc-card.survey::after{content:"SOURCE"}
+
+  /* ---- inline links ---- */
+  a.inl{color:var(--maroon);text-decoration:none;border-bottom:1.5px solid rgba(124,38,24,.35);font-weight:500}
+  a.inl:hover{border-bottom-color:var(--maroon);background:rgba(176,125,43,.12)}
+
+  footer{
+    border-top:3px double var(--maroon);
+    margin-top:20px;padding:34px 0 70px;
+    font-size:.82rem;color:var(--ink-soft);
+  }
+  footer .sig{font-family:"Fraunces";font-style:italic;color:var(--ink);font-size:1rem}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Flight Rising · Product Management</div>
+    <h1>Product &amp; Feature Roadmap
+      <span class="l2">Q2 &amp; Q3 2026</span>
+    </h1>
+    <div class="meta">
+      <span><b>Author</b> cestreitman@</span>
+      <span><b>Updated</b> 05/30/2026</span>
+      <span><b>Status</b> <span class="status">Draft</span></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="orient">
+    <div class="tag">About this project</div>
+    <p><b>Flight Rising</b> is a long-running browser-based pet/creature collection game where players breed, customize, and trade dragons, battle in a turn-based Coliseum, and take part in a recurring calendar of seasonal festivals. It has an active player-driven economy and a vocal community forum.</p>
+    <p>This is an <b>independent portfolio exercise</b>: a roadmap built outside the company, with no access to Flight Rising's data, codebase, or release pipeline. The three linked documents below are the resulting PRD and feature briefs.</p>
+  </div>
+
+  <section>
+    <h2><span class="num">01</span>Context</h2>
+    <p class="lead">This roadmap proposes prioritization for a set of player-requested improvements to Flight Rising, sourced from an independently-conducted ranked-choice voting survey of 97 active players. The survey ranked players' most-desired site feature and product additions across 50+ candidate features using three different RCV weighting systems; results were robust across all three. Full methodology and ranked results are documented <a class="inl" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-rcv/">here</a>. This roadmap selects the top shipping candidates and explains sequencing across FR's 2026 release cycle for Q2 and Q3.</p>
+    <p class="note">Note: this is an independent portfolio exercise; the author has no insider knowledge of FR's actual development roadmap, codebase, or release pipeline.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>Goals</h2>
+    <ul>
+      <li>Address the highest-ranked player-requested improvements from the survey</li>
+      <li>Stay within FR's existing Announcement Post release model; no new infrastructure dependencies</li>
+      <li>Ship at least one feature alongside an existing scheduled release (anniversary, major festival, or breed/apparel standard product release) to leverage natural narrative beats and minimize standalone announcement overhead</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>Inputs &amp; Evidence</h2>
+    <p><b>Primary input:</b> a <a class="inl" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-rcv/">ranked-choice survey</a> of 97 self-selected active players, conducted via the Flight Rising Discussion subforum and a Google Forms instrument. Respondents ranked their top 5 desired improvements from a list of 50+ candidate features (curated from forum suggestions threads). Results were scored using three weighting systems—a GPA-style 5-4-3-2-1 scale, a traditional 10-9-8-7-6 scale, and an equal-weight 1-1-1-1-1 scale. The top 4 features were consistent across all three systems, supporting confidence in the ranking.</p>
+    <p><b>Secondary input:</b> sustained sentiment in FR's Suggestions subforum and FRD subforum, where the top three features appear as recurring topics.</p>
+    <p><b>Acknowledged limitations:</b> forum-only sampling under-represents privacy-conscious players, extremely casual non-forum users, and lapsed players. Self-selection bias likely amplifies signal from heavy/engaged users. The roadmap weights this input heavily because no comparable signal source exists for FR, but the sample bias should inform feature framing during eng review.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>Prioritization Framework</h2>
+    <p>This roadmap uses <b>RICE scoring</b>, adapted to the FR context. Each candidate is scored on:</p>
+    <ul class="sub">
+      <li><b>Reach:</b> estimated share of monthly-active users (MAU) who would benefit, derived from survey ranking frequency and known player-segment overlap. Expressed as a rough percentage.</li>
+      <li><b>Impact:</b> 3 (massive: addresses a daily pain point or has drastic consequences), 2 (high: addresses a frequent friction or adds moderate improvement), 1 (medium: modest improvement), 0.5 (low: niche improvement).</li>
+      <li><b>Confidence:</b> 100% (direct survey evidence + forum corroboration), 80% (survey evidence alone), 50% (inferred).</li>
+      <li><b>Effort:</b> rough person-weeks of eng + UX + PR time, estimated based on feature complexity.</li>
+    </ul>
+    <p><b>RICE score = (Reach × Impact × Confidence) ÷ Effort.</b> Higher scores ship sooner unless sequencing logic argues otherwise.</p>
+
+    <div class="table-scroll">
+      <table>
+        <caption>Table takes top votes from the survey using the 1-1-1-1-1 system. Highlighted rows score above the RICE&nbsp;50 threshold.</caption>
+        <thead>
+          <tr>
+            <th>Feature</th><th>Problem solved</th>
+            <th class="r">Reach</th><th class="r">Imp</th><th class="r">Conf</th><th class="r">Effort</th><th class="r">RICE</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="ship">
+            <td class="feat">Unretire year 1 fest items</td>
+            <td>Aforementioned high-status items get supply trickle, greedflation ends</td>
+            <td class="r">60</td><td class="r">.5</td><td class="r">1</td><td class="r">0.4</td><td class="r rice">75</td>
+          </tr>
+          <tr class="ship">
+            <td class="feat">Inventory search in AH/PM/CR</td>
+            <td>Active traders waste time scrolling through unfiltered inventory</td>
+            <td class="r">95</td><td class="r">2</td><td class="r">.8</td><td class="r">1.2</td><td class="r rice">127</td>
+          </tr>
+          <tr>
+            <td class="feat">Dark theme / other themes</td>
+            <td>Allows for better night-time viewing and user customization of interface</td>
+            <td class="r">80</td><td class="r">1</td><td class="r">1</td><td class="r">3</td><td class="r">27</td>
+          </tr>
+          <tr class="ship">
+            <td class="feat">"Press F to Fight on" keybind</td>
+            <td>Speeds up coliseum farming battles by ~10%</td>
+            <td class="r">40</td><td class="r">3</td><td class="r">1</td><td class="r">.4</td><td class="r rice">300</td>
+          </tr>
+          <tr>
+            <td class="feat">Official nest rental system</td>
+            <td>Currently rely on other's goodwill that your dragons will be returned to you if you send them to another user for breeding</td>
+            <td class="r">25</td><td class="r">3</td><td class="r">1</td><td class="r">6</td><td class="r">13</td>
+          </tr>
+          <tr>
+            <td class="feat">Ability to lock from breeding</td>
+            <td>Keeps player from accidentally breeding a dragon they want childless; keeps dragon from showing up on the "add as parent to nest" menu</td>
+            <td class="r">80</td><td class="r">1</td><td class="r">.8</td><td class="r">3</td><td class="r">21</td>
+          </tr>
+          <tr>
+            <td class="feat">color wheel expansion</td>
+            <td>Adds more options for dragon customization, significantly</td>
+            <td class="r">100</td><td class="r">3</td><td class="r">1</td><td class="r">50</td><td class="r">6</td>
+          </tr>
+          <tr class="ship">
+            <td class="feat">Rebalance playground payouts</td>
+            <td>75k treasure per day made more sense in 2013; treasure inflated vastly over time; now the 75k means less. Bump it up</td>
+            <td class="r">30</td><td class="r">1</td><td class="r">.8</td><td class="r">.4</td><td class="r rice">180</td>
+          </tr>
+          <tr>
+            <td class="feat">Gene errors getting fixed asap</td>
+            <td>Improves user experience, since dragons they bought will be properly customizable and genes will be worth the money spent</td>
+            <td class="r">15</td><td class="r">3</td><td class="r">1</td><td class="r">??</td><td class="r">??</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Note: scores above are author estimates based on survey ranking frequency and inferred eng complexity. A real FR PM with access to player data and codebase familiarity would refine these. Scores are presented to demonstrate prioritization logic, not to assert exact numerical accuracy.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>Analysis &amp; Sequencing Rationale</h2>
+    <p>If we take all survey candidates with a RICE score above 50, we are left with "unretire year 1 fest items", "Inventory search in AH/PM/CR", "Press F to Fight on" keybind, and "Rebalance playground payouts".</p>
+    <p>We will, at the moment, go through the high-RICE entries and decide whether or not to pursue or shelve it.</p>
+
+    <div class="decision go">
+      <b>Unretiring year 1 festival items:</b> this is a simple policy change that FR can decide to execute. For this roadmap, we proceed with this feature, with the brief located <a class="inl" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-pm/brief-festival-items.pdf">here</a>.
+    </div>
+    <div class="decision go">
+      <b>Inventory search in AH/PM/CR:</b> a low-effort change that addresses a daily friction and should be easily implementable via legacy search functions already existing elsewhere in FR's codebase. We choose to implement, with the feature PRD located <a class="inl" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-pm/prd-inventory-search.pdf">here</a>.
+    </div>
+    <div class="decision go">
+      <b>Press F to Fight on:</b> extremely simple QOL change that is highly requested. Expected low-effort, pending confirmation the transition surface is cleanly modifiable, and will please the playerbase. Highest RICE on the board (300) due to minimal effort. We ship it bundled with another release rather than standalone, as it doesn't warrant its own announcement. Feature brief <a class="inl" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-pm/brief-keybind.pdf">here</a>. No shipping urgency; it can ride along with another announcement, so its timing is flexible.
+    </div>
+    <div class="decision no">
+      <b>Rebalance playground payouts:</b> the nature of how to rebalance should take little time by eng, but requires executive coordination and decision-making that would take several meetings. Appropriate rebalance rates, as well as whether or not to rebalance at all, is outside scope of the roadmap as it is fictional, and this feature's implementation requires specific insider knowledge. Shelved.
+    </div>
+
+    <p style="margin-top:22px"><b>Other entries, we have decided to shelve for this roadmap, and why:</b></p>
+    <div class="decision shelf"><b>Dark theme / other themes:</b> between the time of the survey and the time of the roadmap, this feature was implemented by the real-life FR team.</div>
+    <div class="decision shelf"><b>Official nest rental system:</b> As per the RICE score, the effort is high. We can perhaps begin to work on it in Q3 2026, but it can't ship before Q4.</div>
+    <div class="decision shelf"><b>Ability to lock from breeding:</b> Low-impact issue; modest improvement for a narrow collector use case (RICE 21, below threshold).</div>
+    <div class="decision shelf"><b>Color wheel expansion:</b> significant effort from the art team, who is already working on other tasks at the moment, e.g. new breeds and apparel. Let them keep their current priorities.</div>
+    <div class="decision shelf"><b>Gene errors getting fixed asap:</b> this would essentially require one artist to do constant fire drills as players inform staff of errors. Such a job is foreign to most artists, and difficult to hire. We would rather keep our current practices.</div>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>The Documents</h2>
+    <p>The three shipping candidates each have a supporting document. Each opens as a PDF.</p>
+    <div class="docs-grid">
+      <a class="doc-card" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-pm/prd-inventory-search.pdf">
+        <div class="kind">PRD</div>
+        <div class="t">Inventory Search: AH, CR, PM</div>
+        <div class="d">A search input for the Auction House, Crossroads, and Private Message inventory views. P0/P1/P2 requirements, measurable outcomes, instrumentation needs, fuzzy-match spec, and rollout plan.</div>
+        <div class="open"><span>Open PDF &rarr;</span></div>
+      </a>
+      <a class="doc-card" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-pm/brief-festival-items.pdf">
+        <div class="kind">Feature Brief</div>
+        <div class="t">Unretiring first-year festival items</div>
+        <div class="d">Adding the ~130 year-1 festival items into the loot pool of Joxar's Spare Inventory Crate to end artificial scarcity, with supply-pool math and veteran-backlash mitigation.</div>
+        <div class="open"><span>Open PDF &rarr;</span></div>
+      </a>
+    </div>
+    <div class="docs-grid full">
+      <a class="doc-card" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-pm/brief-keybind.pdf">
+        <div class="kind">Feature Brief</div>
+        <div class="t">"Press F to Fight on!" keybind</div>
+        <div class="d">A keybind for the Coliseum's "Fight on!" battle-transition button, making the full battle loop keyboard-only. Includes a Keystroke-Level Model estimate of the realized speed-up.</div>
+        <div class="open"><span>Open PDF &rarr;</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>Risks &amp; Open Questions</h2>
+    <ul>
+      <li><b>Sample bias:</b> The survey reached only forum-active players; a meaningful share of MAU never visits forums. Priorities for that segment may differ. If a real FR PM commissioned this work, they would supplement with in-game polling or behavioral data before committing to the sequence.</li>
+      <li><b>Effort estimates are external:</b> All effort scores are inferred from feature complexity without codebase access. Real eng review may significantly adjust Effort (especially for inventory search, where the cost depends on whether legacy Customize-tab search code is still in the codebase — flagged in the PRD).</li>
+      <li><b>Veteran backlash on Y1 items:</b> Unretiring scarce items will displease players who paid premium prices for them. The festival-items brief includes mitigation (slow drip via JSIC, sentiment monitoring), but this is the highest-risk feature for community reception.</li>
+      <li><b>Bundling capacity:</b> All three features assume FR's Announcement Post model can accommodate them without delaying other planned releases. If announcement bandwidth is tighter than estimated, expect to drop the keybind to a later cycle (it's the smallest and easiest to defer).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span>Next Steps</h2>
+    <ul>
+      <li>PRD for inventory search authored: <a class="inl" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-pm/prd-inventory-search.pdf">link</a></li>
+      <li>Feature brief for unretiring Y1 festival items authored: <a class="inl" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-pm/brief-festival-items.pdf">link</a></li>
+      <li>Feature brief for "Press F to fight on" keybind authored: <a class="inl" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-pm/brief-keybind.pdf">link</a></li>
+      <li>Source survey research available at: <a class="inl" target="_blank" rel="noopener" href="https://constancestreitman.github.io/fr-rcv/">link</a></li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="sig">An independent product-management portfolio exercise.</p>
+    <p style="margin-top:6px">Flight Rising is a trademark of its respective owner. This roadmap is an unofficial, non-commercial portfolio project and is not affiliated with or endorsed by Flight Rising.</p>
+  </div>
+</footer>
+
+</body>
+</html>
