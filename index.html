@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FR Product &amp; Feature Roadmap Q2&amp;3 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<!-- System fonts only: Verdana for titles, Georgia for body. Nothing to load. -->
 <style>
   :root{
     --paper:#f4ece0;
@@ -19,6 +17,8 @@
     --gold:#b07d2b;
     --green:#3f5a36;
     --shadow:rgba(60,40,24,.14);
+    --display:Verdana,Geneva,Tahoma,"DejaVu Sans",sans-serif;
+    --body:Georgia,"Times New Roman",Cambria,serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -28,7 +28,7 @@
       radial-gradient(circle at 18% -10%, rgba(176,125,43,.10), transparent 40%),
       radial-gradient(circle at 110% 5%, rgba(124,38,24,.08), transparent 45%);
     color:var(--ink);
-    font-family:"Newsreader",Georgia,serif;
+    font-family:var(--body);
     font-size:18px;
     line-height:1.65;
     -webkit-font-smoothing:antialiased;
@@ -46,15 +46,15 @@
     color:var(--maroon);font-weight:600;margin-bottom:18px;
   }
   h1{
-    font-family:"Fraunces",serif;
-    font-weight:900;
-    font-size:clamp(2.4rem,6vw,4.1rem);
-    line-height:1.02;
-    letter-spacing:-.015em;
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(2.3rem,5.6vw,3.9rem);
+    line-height:1.05;
+    letter-spacing:-.02em;
     color:var(--ink);
     margin-bottom:18px;
   }
-  h1 .l2{display:block;color:var(--maroon);font-style:italic;font-weight:500;font-size:.62em}
+  h1 .l2{display:block;font-family:var(--body);color:var(--maroon);font-style:italic;font-weight:400;font-size:.5em;letter-spacing:0;margin-top:4px}
   .meta{
     display:flex;flex-wrap:wrap;gap:8px 26px;
     font-size:.84rem;letter-spacing:.02em;color:var(--ink-soft);
@@ -84,16 +84,16 @@
   section{padding:38px 0;border-top:1px solid var(--line)}
   section:first-of-type{border-top:none}
   h2{
-    font-family:"Fraunces",serif;
-    font-weight:600;font-size:1.85rem;letter-spacing:-.01em;
+    font-family:var(--display);
+    font-weight:700;font-size:1.7rem;letter-spacing:-.005em;
     margin-bottom:6px;color:var(--maroon-deep);
   }
   h2 .num{
     font-size:.7rem;letter-spacing:.2em;color:var(--gold);
-    display:block;font-family:"Newsreader";font-weight:600;margin-bottom:2px;text-transform:uppercase;
+    display:block;font-family:var(--display);font-weight:700;margin-bottom:2px;text-transform:uppercase;
   }
   h3{
-    font-family:"Fraunces",serif;font-weight:600;font-size:1.18rem;
+    font-family:var(--display);font-weight:700;font-size:1.1rem;
     margin:22px 0 6px;color:var(--ink);
   }
   p{margin-bottom:14px}
@@ -119,7 +119,7 @@
   table{border-collapse:collapse;width:100%;min-width:620px;font-size:.86rem;background:#fbf6ee}
   caption{caption-side:top;text-align:left;font-size:.8rem;color:var(--ink-soft);padding:10px 14px;font-style:italic}
   thead th{
-    background:var(--maroon);color:#f7ede0;font-family:"Newsreader";
+    background:var(--maroon);color:#f7ede0;font-family:var(--display);
     font-weight:600;text-align:left;padding:11px 13px;font-size:.78rem;
     letter-spacing:.04em;text-transform:uppercase;
   }
@@ -137,7 +137,7 @@
   .decision.go::before{background:var(--green)}
   .decision.shelf::before{background:var(--gold)}
   .decision.no::before{background:var(--maroon)}
-  .decision .verdict{font-family:"Fraunces";font-weight:600}
+  .decision .verdict{font-family:var(--display);font-weight:600}
   .decision.go .verdict{color:var(--green)}
   .decision.shelf .verdict{color:var(--gold)}
   .decision.no .verdict{color:var(--maroon)}
@@ -160,7 +160,7 @@
   }
   .doc-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px var(--shadow);border-color:var(--maroon)}
   .doc-card .kind{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
-  .doc-card .t{font-family:"Fraunces";font-weight:600;font-size:1.18rem;line-height:1.15;margin-bottom:8px;color:var(--ink)}
+  .doc-card .t{font-family:var(--display);font-weight:700;font-size:1.1rem;line-height:1.15;margin-bottom:8px;color:var(--ink)}
   .doc-card .d{font-size:.9rem;color:var(--ink-soft);flex-grow:1}
   .doc-card .open{margin-top:14px;font-size:.82rem;font-weight:600;color:var(--maroon);letter-spacing:.02em}
   .doc-card .open span{transition:margin-left .18s ease}
@@ -177,7 +177,7 @@
     margin-top:20px;padding:34px 0 70px;
     font-size:.82rem;color:var(--ink-soft);
   }
-  footer .sig{font-family:"Fraunces";font-style:italic;color:var(--ink);font-size:1rem}
+  footer .sig{font-family:var(--body);font-style:italic;color:var(--ink);font-size:1rem}
 </style>
 </head>
 <body>
